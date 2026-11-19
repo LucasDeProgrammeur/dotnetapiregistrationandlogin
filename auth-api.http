@@ -1,0 +1,21 @@
+@auth_api_HostAddress = http://localhost:5299
+
+### Sign up
+POST {{auth_api_HostAddress}}/api/account/register
+Content-Type: application/json
+
+{
+  "userName": "testuser",
+  "password": "secret"
+}
+
+### Log in (returns userName + JWT token)
+POST {{auth_api_HostAddress}}/api/account/login
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "secret"
+}
+
+###
